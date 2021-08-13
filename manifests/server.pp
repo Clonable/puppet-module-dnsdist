@@ -7,11 +7,11 @@
 define dnsdist::server (
   String $cluster_name,
   String $address,
-  String $source = undef,
-  Integer $qps = undef,
-  Integer $weight = undef,
-  String $pool = undef,
-  Hash[String, String] $extra_options = undef,
+  Optional[String] $source = undef,
+  Optional[Integer] $qps = undef,
+  Optional[Integer] $weight = undef,
+  Optional[String] $pool = undef,
+  Optional[Hash] $extra_options = undef,
 ){
 
   include ::dnsdist::params
