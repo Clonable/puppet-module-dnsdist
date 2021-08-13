@@ -2,8 +2,6 @@
 #
 # A description of what this class does
 #
-# @example
-#   include dnsdist::server
 define dnsdist::server (
   String $cluster_name,
   String $address,
