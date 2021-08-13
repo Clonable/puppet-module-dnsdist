@@ -16,7 +16,7 @@ define dnsdist::server (
 
   include ::dnsdist::params
 
-  $order = "50-${cluster_name}-01-${address}"
+  $order = "50-${cluster_name}-${name}"
 
   # Template uses $address, $cluster_name
   concat::fragment { "${cluster_name}_server_${name}":
