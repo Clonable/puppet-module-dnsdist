@@ -3,7 +3,7 @@
 #
 # @api private
 #
-class dnsdist::service {
+define dnsdist::service {
 
   if $dnsdist::service_manage {
     service { 'dnsdist':

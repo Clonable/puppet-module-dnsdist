@@ -1,7 +1,7 @@
 # @summary This class manages the dnsdist instance
 #
 #
-class dnsdist::instance (
+define dnsdist::instance (
   String $address = '127.0.0.1:53',
   Optional[Array[String]] $additional_addresses,
 ){
