@@ -4,6 +4,7 @@ class dnsdist (
   Boolean $service_manage = true,
   Boolean $service_enable = true,
   Enum['running', 'stopped'] $service_ensure = 'running',
+  String $version = $dnsdist::params::version
   ) {
 
   contain dnsdist::install
