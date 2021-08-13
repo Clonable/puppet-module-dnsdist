@@ -25,8 +25,8 @@ class dnsdist::install {
 
 
     package {'dnsdist':
-      ensure => $dnsdist::package_ensure,
-      require => [Package['dnsdist']],
+      ensure  => $dnsdist::package_ensure,
+      require => [Apt::Source['repo.powerdns.com']],
     }
   }
 }
