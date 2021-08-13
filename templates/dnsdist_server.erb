@@ -3,7 +3,9 @@ newServer({
     <% if @source %>, source=<%= @source%><% end %>
     <% if @qps%>, qps=<%= @qps%><% end %>
     <% if @weight%>, weight=<%= @qps%><% end %>
-    <% @extra_options.each do |option, value| -%>
+    <% if @extra_options %>
+        <% @extra_options.each do |option, value| -%>
     , <%= option %>=<%= value %>
-    <% end %>
+        <% end %>
+    <%end%>
 })
