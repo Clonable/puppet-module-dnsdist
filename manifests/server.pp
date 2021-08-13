@@ -16,10 +16,10 @@ define dnsdist::server (
 
   include ::dnsdist::params
 
-  $order = "50-${cluster_name}-${name}"
+  $order = "50-${cluster_name}-${title}"
 
   # Template uses $address, $cluster_name
-  concat::fragment { "${cluster_name}_server_${name}":
+  concat::fragment { "${cluster_name}_server_${title}":
     order   => $order,
     target  => $dnsdist::params::config_file,
     content => template('dnsdist/dnsdist_server.erb'),

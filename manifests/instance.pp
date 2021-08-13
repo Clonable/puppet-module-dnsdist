@@ -4,6 +4,7 @@
 define dnsdist::instance (
   String $address = '127.0.0.1:53',
   Array[String] $additional_addresses = [],
+  Optional[Array[String]] $acl = undef,
 ){
   include ::dnsdist::params
 

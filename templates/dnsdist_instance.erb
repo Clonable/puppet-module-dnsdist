@@ -1,4 +1,8 @@
 setLocal('<%= @address %>');
 <% Array(@additional_addresses).each do |address| -%>
 addLocal('<%= address %>')
-<% end %>
+<% end -%>
+
+<% if @acl -%>
+setACL({<% @acl.each do |addr| -%>"<%= addr %>",<% end -%>})
+<% end -%>
