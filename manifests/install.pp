@@ -2,7 +2,7 @@
 #
 #
 # @api private
-define dnsdist::install {
+class dnsdist::install {
 
   # install dnsdist package
   if $dnsdist::package_manage {
