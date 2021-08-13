@@ -8,7 +8,7 @@ class dnsdist::install {
   if $dnsdist::package_manage {
     apt::pin { 'dnsdist':
       origin   => 'repo.powerdns.com',
-      priority => '100',
+      priority => '600',
     }
 
     apt::source { 'repo.powerdns.com':
