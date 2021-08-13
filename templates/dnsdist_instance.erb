@@ -1,0 +1,4 @@
+setLocal('<%= @address %>');
+<% Array(@additional_addresses).each do |address| -%>
+addLocal('<%= address %>')
+<% end %>
