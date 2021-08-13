@@ -20,13 +20,13 @@ class dnsdist::install {
         id     => '9FAAA5577E8FCF62093D036C1B0C6205FD380FBB',
         server => 'keyserver.ubuntu.com',
       },
-      require      => [Apt::Pin['dnsdist']];
+      require      => Apt::Pin['dnsdist'];
     }
 
 
     package {'dnsdist':
       ensure  => $dnsdist::package_ensure,
-      require => [Apt::Source['repo.powerdns.com']],
+      require => Apt::Source['repo.powerdns.com'],
     }
   }
 }
