@@ -5,6 +5,7 @@ define dnsdist::instance (
   String $address = '127.0.0.1:53',
   Array[String] $additional_addresses = [],
 ){
+  include ::dnsdist::params
 
   $order = '10-instance';
 

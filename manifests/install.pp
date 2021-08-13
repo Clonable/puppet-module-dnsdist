@@ -7,6 +7,7 @@ class dnsdist::install {
   # install dnsdist package
   if $dnsdist::package_manage {
     apt::pin { 'dnsdist':
+      packages => 'dnsdist*',
       origin   => 'repo.powerdns.com',
       priority => '600',
     }
