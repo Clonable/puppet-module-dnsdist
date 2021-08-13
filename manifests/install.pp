@@ -25,7 +25,8 @@ class dnsdist::install {
 
 
     package {'dnsdist':
-      ensure => $dnsdist::package_ensure
+      ensure => $dnsdist::package_ensure,
+      require => [Package['dnsdist']],
     }
   }
 }
