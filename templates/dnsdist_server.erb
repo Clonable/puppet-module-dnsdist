@@ -1,17 +1,17 @@
 newServer({
-    address="<%= @address %>"
+    address="<%= @address %>",
 <% if @source -%>
-    , source="<%= @source %>"
+    source="<%= @source %>",
 <% end -%>
 <% if @qps -%>
-    , qps=<%= @qps %>
+    qps=<%= @qps %>,
 <% end -%>
 <% if @weight -%>
-    , weight=<%= @weight %>
+    weight=<%= @weight %>,
 <% end -%>
 <% if @extra_options -%>
 <% @extra_options.each do |option, value| -%>
-    , <%= option %>="<%= value %>"
+    <%= option %>="<%= value %>",
 <% end -%>
 <% end -%>
 })
