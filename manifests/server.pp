@@ -11,9 +11,12 @@ define dnsdist::server (
   Optional[Integer] $qps,
   Optional[Integer] $weight,
   Optional[String] $pool,
+  Optional[Hash] $extra_options,
 ){
 
-  $order = "20-${cluster_name}-01-${address}"
+  include ::dnsdist::params
+
+  $order = "50-${cluster_name}-01-${address}"
 
   # Template uses $address, $cluster_name
   concat::fragment { "${cluster_name}_server_${name}":
