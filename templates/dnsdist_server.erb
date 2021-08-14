@@ -9,6 +9,9 @@ newServer({
 <% if @weight -%>
     weight=<%= @weight %>,
 <% end -%>
+<% if @pool -%>
+    pool=<%= @pool %>,
+<% end -%>
 <% if @extra_options -%>
 <% @extra_options.each do |option, value| -%>
     <%= option %>="<%= value %>",
