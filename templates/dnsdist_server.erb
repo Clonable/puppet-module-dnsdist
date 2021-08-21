@@ -1,7 +1,7 @@
 newServer({
-    address="<%= @address %>",
+    address='<%= @address %>',
 <% if @source -%>
-    source="<%= @source %>",
+    source='<%= @source %>',
 <% end -%>
 <% if @qps -%>
     qps=<%= @qps %>,
@@ -10,11 +10,11 @@ newServer({
     weight=<%= @weight %>,
 <% end -%>
 <% if @pool -%>
-    pool=<%= @pool %>,
+    pool='<%= @pool %>',
 <% end -%>
 <% if @extra_options -%>
 <% @extra_options.each do |option, value| -%>
-    <%= option %>="<%= value %>",
+    <%= option %>='<%= value %>',
 <% end -%>
 <% end -%>
 })

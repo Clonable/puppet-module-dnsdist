@@ -4,5 +4,5 @@ addLocal('<%= address %>')
 <% end -%>
 
 <% if @acl -%>
-setACL({<% @acl.each do |addr| -%>"<%= addr %>",<% end -%>})
+setACL({<% @acl.each do |addr| -%>'<%= addr %>',<% end -%>})
 <% end -%>
